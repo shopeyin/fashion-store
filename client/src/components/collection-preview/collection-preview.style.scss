@@ -1,0 +1,30 @@
+.collection__preview {
+  display: grid;
+  padding: 3rem 3rem 0rem 3rem;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-row-gap: 1rem;
+  grid-column-gap: 3rem;
+
+  @media screen and (max-width: 37.5em) {
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    grid-template-rows: repeat(30px, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 25em) {
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .collection__title {
+    display: grid;
+    font-weight: bolder;
+    grid-column: 1/ -1;
+    align-items: flex-end;
+    padding: 5px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+.body-container {
+  display: grid;
+  grid-template-rows: 96vh repeat(3, min-content) 200px;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 16rem) [col-end]
+    )
+    [center-end]
+    1fr [full-end];
+}

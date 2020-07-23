@@ -1,0 +1,132 @@
+@import "../../index.scss";
+.gallery {
+  grid-column: col-start 2 / col-end 9;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 6rem 0;
+
+  // 650px
+  @media screen and (max-width: 40.7em) {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0;
+  }
+
+  .card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+      height: 50rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      overflow: hidden;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.15);
+
+      &--front {
+        background-color: #fff;
+        text-align: center;
+
+        li {
+          list-style-type: none;
+        }
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+
+        &-1 {
+          background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+        }
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            #0d43f5d3,
+            #7a3ddb
+          );
+        }
+        &-3 {
+          background-image: linear-gradient(to right bottom, #48ff00, #89c566);
+        }
+      }
+    }
+
+    &:hover .card__side--front {
+      transform: rotateY(-180deg);
+    }
+    &:hover .card__side--back {
+      transform: rotateY(0deg);
+    }
+
+    &__picture {
+      background-size: cover;
+      background-position: center;
+      height: 90%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+    }
+
+    &__price-box {
+      text-align: center;
+      color: white;
+      margin-bottom: 8rem;
+    }
+
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+
+  .btn:link,
+  .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+
+  .btn-white {
+    background-color: #fff;
+    color: #777;
+  }
+}
