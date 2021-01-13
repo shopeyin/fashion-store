@@ -21,7 +21,7 @@ const Gallery = () => {
             <div className="card__cta">
               <div className="card__price-box">
                 <p className="card__price-only">Only</p>
-                <p className="card__price-value">$276</p>
+                <p className="card__price-value">&#8358;276</p>
               </div>
               {/* <a href="#" className="btn btn-white">
                 Add to Cart
@@ -47,7 +47,7 @@ const Gallery = () => {
             <div className="card__cta">
               <div className="card__price-box">
                 <p className="card__price-only">Only</p>
-                <p className="card__price-value">$400</p>
+                <p className="card__price-value">&#8358;400</p>
               </div>
               {/* <a href="#" className="btn btn-white">
                 Add to Cart
@@ -73,7 +73,7 @@ const Gallery = () => {
             <div className="card__cta">
               <div className="card__price-box">
                 <p className="card__price-only">Only</p>
-                <p className="card__price-value">$146</p>
+                <p className="card__price-value">&#8358;146</p>
               </div>
               {/* <a href="#" className="btn btn-white">
                 Add to Cart

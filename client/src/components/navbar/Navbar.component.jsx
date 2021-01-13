@@ -18,6 +18,7 @@ class Navbar extends React.Component {
 
   render() {
     const { currentUser, signOutStart } = this.props;
+    console.log(currentUser);
     return (
       <div className="navigation">
         {[1].map((item, i) => {
@@ -95,54 +96,6 @@ class Navbar extends React.Component {
                       Shop
                     </Link>
                   </li>
-                  {/* <li className="navigation__item">
-                    {this.props.currentUser ? (
-                      <Link
-                        className="navigation__link"
-                        to="/"
-                        onClick={() => {
-                          auth.signOut();
-                          this.unCheck(i);
-                        }}
-                      >
-                        <span className="navigation__link">02</span>
-                        Logout <br />
-                        {this.props.currentUser.displayName}
-                      </Link>
-                    ) : (
-                      <li>
-                        <Link
-                          className="navigation__link"
-                          onClick={() => this.unCheck(i)}
-                          to="/login"
-                        >
-                          <span>02</span>
-                          Login
-                        </Link>
-                        <li className="navigation__item">
-                          <Link
-                            className="navigation__link"
-                            onClick={() => this.unCheck(i)}
-                            to="/signup"
-                          >
-                            <span>03</span>
-                            Signup
-                          </Link>
-                        </li>
-                      </li>
-                    )}
-                  </li>
-
-                  <li className="navigation__item">
-                    <Link
-                      className="navigation__link"
-                      onClick={() => this.unCheck(i)}
-                      to="/shop"
-                    >
-                      <span>04</span>
-                      Shop
-                    </Link>
-                  </li> */}
                 </ul>
               </nav>
             </div>

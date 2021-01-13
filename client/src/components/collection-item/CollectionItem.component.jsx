@@ -33,7 +33,7 @@ const CollectionItem = ({ item, addItem }) => {
         ></figure>
         <figcaption>
           <span className="name">{name}</span>
-          <span className="price">${price}</span>
+          <span className="price">&#8358;{price}</span>
         </figcaption>
         <div className="collection__item-button">
           <button

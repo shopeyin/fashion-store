@@ -6,6 +6,7 @@ import { selectDirectorySections } from "../../redux/directory/directory.selecto
 import MenuItem from "../menuItem/MenuItem.component";
 
 const TrendyImages = ({ sections }) => {
+  
   return (
     <div className="trendy-images" id="trendy_images">
       {sections.map(({ id, ...otherSectionProps }) => {

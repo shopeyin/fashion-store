@@ -21,6 +21,7 @@ import { Lines } from "react-preloaders";
 
 const HomePage = lazy(() => import("./pages/homepage/Homepage.component"));
 const ShopPage = lazy(() => import("./pages/shoppage/ShopPage.component"));
+const Order = lazy(() => import("./pages/order/Order"));
 const CheckoutPage = lazy(() =>
   import("./pages/checkout/CheckoutPage.component")
 );
@@ -44,7 +45,7 @@ const App = ({ checkUserSession, currentUser, hidden }) => {
       <Navbar />
       <Switch>
         <ErrorBoundary>
-          <Suspense fallback={<div>..Loading</div>}>
+          <Suspense fallback={<div className="d-flex justify-content-center">..Loading</div>}>
             <Route exact path="/" component={HomePage} />
             <Route
               exact
@@ -60,6 +61,7 @@ const App = ({ checkUserSession, currentUser, hidden }) => {
             />
 
             <Route path="/shop" component={ShopPage} />
+            <Route path="/order" component={Order} />
             <Route exact path="/checkout" component={CheckoutPage} />
           </Suspense>
         </ErrorBoundary>

@@ -8,6 +8,7 @@ import {
 import "./checkout.style.scss";
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
+ 
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <tr>
