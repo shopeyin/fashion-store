@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { Redirect } from "react-router-dom";
 import firebase from "../../components/firebase/firebase.utils";
 import OrderedItems from "./OrderedItems";
 import "./order.style.scss";
 function Order({ user }) {
+  // if (!user) return <Redirect to="/login" />;
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     if (user) {
