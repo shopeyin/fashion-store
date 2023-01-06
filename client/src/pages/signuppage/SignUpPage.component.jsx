@@ -4,17 +4,6 @@ import { connect } from "react-redux";
 import { signUpStart } from "../../redux/user/user.action";
 
 const SignUpPage = ({ signUpStart }) => {
-  // constructor() {
-  //   super();
-
-  //   this.state = {
-  //     displayName: "",
-  //     email: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //   };
-  // }
-
   const [userCredentials, setUserCredentials] = useState({
     displayName: "",
     email: "",
@@ -25,7 +14,7 @@ const SignUpPage = ({ signUpStart }) => {
   const { displayName, email, password, confirmPassword } = userCredentials;
 
   const handleSubmit = async (event) => {
-      event.preventDefault();
+    event.preventDefault();
 
     if (password !== confirmPassword) {
       alert("passwords don't match");
@@ -50,7 +39,7 @@ const SignUpPage = ({ signUpStart }) => {
         <div className="signup__form">
           <form onSubmit={handleSubmit} className="form">
             <div className="signup__header">
-              <h3>Join the app</h3>
+              <h3>Sign up</h3>
             </div>
             <div className="form__group">
               <input

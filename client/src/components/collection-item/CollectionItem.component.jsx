@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.action";
 
 const CollectionItem = ({ item, addItem }) => {
-  // console.log(item);
-  // console.log(addItem);
+
   const [message, setMessage] = useState(false);
 
   const addToCartNotification = () => {
