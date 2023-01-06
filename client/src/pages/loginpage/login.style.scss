@@ -3,19 +3,7 @@
   grid-template-rows: repeat(6, 100px);
   grid-template-columns: repeat(10, 1fr);
 
-  background-color: black;
-  background-image: radial-gradient(
-      white,
-      rgba(255, 255, 255, 0.2) 2px,
-      transparent 40px
-    ),
-    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
-    radial-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 30px
-    );
+ 
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 
@@ -37,6 +25,8 @@
     @media screen and (max-width: 37.5em) {
       background: linear-gradient(to right, lightgrey 100%, transparent);
     }
+
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 1);
 
     .login__form {
       grid-row: 3/11;
