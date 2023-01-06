@@ -39,7 +39,7 @@ const SignUpPage = ({ signUpStart }) => {
         <div className="signup__form">
           <form onSubmit={handleSubmit} className="form">
             <div className="signup__header">
-              <h3>Sign up</h3>
+              <h3>Sign up here</h3>
             </div>
             <div className="form__group">
               <input
